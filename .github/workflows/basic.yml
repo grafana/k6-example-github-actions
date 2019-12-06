@@ -2,7 +2,7 @@ on: [push]
 
 jobs:  
   k6_local_test:
-    name: k6 local test run
+    name: k6 local test run - basic example
     runs-on: ubuntu-latest
     container: docker://loadimpact/k6:latest
   
@@ -10,5 +10,5 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Local k6 test - basic example
-      run: k6 run script.js
+    - name: Local k6 test
+      run: k6 run basic/script.js
