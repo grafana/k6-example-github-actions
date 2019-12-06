@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:  
+  k6_local_test:
+    name: k6 cloud test run
+    runs-on: ubuntu-latest
+    container: docker://loadimpact/k6:latest
+  
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Cloud k6 test
+      env:
+        K6_CLOUD_TOKEN: ${{ secrets.k6_cloud_token }}
+      run: k6 run cloud/script.js
