@@ -13,4 +13,4 @@ jobs:
     - name: Local k6 test with env vars
       env:
         MY_HOSTNAME: test.loadimpact.com
-      run: k6 run env-var/script-with-env-vars.js
+      run: k6 run env-var/script.js
