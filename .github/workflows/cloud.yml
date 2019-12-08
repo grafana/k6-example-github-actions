@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:  
-  k6_local_test:
+  k6_cloud_test:
     name: k6 cloud test run
     runs-on: ubuntu-latest
     container: docker://loadimpact/k6:latest
