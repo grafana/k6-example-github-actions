@@ -11,6 +11,6 @@ Examples:
 
 More complex examples could be combined from the basic examples from the list above.
 
-Note: It is still under discussion if we should create `custom action` for running k6. Examples above use just basic 2 step processes: first step is to download and install k6 and second step is to run k6 test. Usage of a custom github action could hide first step, but it is not a significant improvement. The downside is that implementing k6 custom github action we have to explicitely define it's inputs and outputs, so it will be either rewriting of k6 cli or implemeting limited version of k6 cli. Both options looks worth in comparison with flexible `run: k6 ...` command.
+Note: It is still under discussion if we should create `custom action` for running k6. Examples above use just basic 2 step processes: first step is to download and install k6 and second step is to run k6 test. Usage of a custom github action could hide first step, but it is not a significant improvement. The downside is that implementing k6 custom github action we have to explicitely define it's inputs and outputs, so it will be either rewriting of k6 cli or implemeting limited version of k6 cli. Both options look worse compared to the flexible `run: k6 ...` command.
 
-The full guide describing how to use this repository is located at: <TO BE WRITTEN>
+The full guide describing how to use this repository is located at: "TO BE WRITTEN"
