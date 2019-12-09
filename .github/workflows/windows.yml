@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:  
+  k6_local_test:
+    name: k6 local test run on windows
+    runs-on: windows-latest
+  
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: download and extract k6 release binaries
+      run: |
+        curl -L https://github.com/loadimpact/k6/releases/download/v0.25.1/k6-v0.25.1-win64.zip -o k6.zip
+        7z.exe e k6.zip
+      shell: bash
+
+    - name: k6 test
+      run: ./k6.exe run basic/script.js
+      shell: bash
