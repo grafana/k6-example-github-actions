@@ -1,14 +1,15 @@
 on: [push]
 
-jobs:  
+jobs:
   k6_local_test:
     name: k6 local test run - basic example
     runs-on: ubuntu-latest
-    container: docker://loadimpact/k6:latest
-  
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
 
-    - name: Local k6 test
-      run: k6 run basic/script.js
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run local k6 test
+        uses: k6io/action@v0.1
+        with:
+          filename: basic/script.js

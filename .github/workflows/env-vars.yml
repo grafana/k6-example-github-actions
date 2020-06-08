@@ -1,16 +1,18 @@
 on: [push]
 
-jobs:  
+jobs:
   k6_local_test:
     name: k6 local test run - env vars example
     runs-on: ubuntu-latest
     container: docker://loadimpact/k6:latest
-  
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
 
-    - name: Local k6 test with env vars
-      env:
-        MY_HOSTNAME: test.loadimpact.com
-      run: k6 run env-var/script.js
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run k6 cloud test
+        uses: k6io/action@v0.1
+        with:
+          filename: env-var/script.js
+        env:
+          MY_HOSTNAME: test.loadimpact.com
