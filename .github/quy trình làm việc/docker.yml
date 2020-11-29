@@ -1,4 +1,4 @@
-on: [push]
+![.github/workflows/docker.yml](https://github.com/k6io/example-github-actions/workflows/.github/workflows/docker.yml/badge.svg?branch=master&event=push)
 
 jobs:
   k6_local_test:
