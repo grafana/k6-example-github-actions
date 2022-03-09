@@ -5,7 +5,7 @@ jobs:
   build:
     name: Run k6 cloud test
     runs-on: ubuntu-latest
-    environment: cloud
+    environment: test
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -14,4 +14,4 @@ jobs:
         with:
           filename: cloud/script.js
           cloud: true
-          token: ${{ secrets.K6_CLOUD_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
