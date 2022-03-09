@@ -1,4 +1,4 @@
-name: Main Workflow
+name: Cloud Workflow
 on: [push]
 
 jobs:
@@ -13,4 +13,4 @@ jobs:
         with:
           filename: cloud/script.js
           cloud: true
-          token: ${{ secrets.K6_CLOUD_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
