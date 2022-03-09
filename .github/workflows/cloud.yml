@@ -14,4 +14,4 @@ jobs:
         with:
           filename: cloud/script.js
           cloud: true
-          token: ${{ K6_CLOUD_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_TOKEN }}
