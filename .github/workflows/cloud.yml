@@ -9,9 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run k6 cloud test
-        uses: k6io/action@v0.1
+        uses: grafana/k6-action@v0.2.0
         with:
           filename: cloud/script.js
           cloud: true
         env:
-          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_TOKEN }}
