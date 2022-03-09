@@ -13,5 +13,4 @@ jobs:
         with:
           filename: cloud/script.js
           cloud: true
-        env:
           token: d0d9ad16f56faa9910201fd98096a9283837d5ff046ce1ee951429a21b7c8912
