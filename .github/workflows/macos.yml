@@ -1,3 +1,4 @@
+name: MacOS Workflow
 on: [push]
 
 jobs:

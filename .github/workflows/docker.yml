@@ -1,3 +1,4 @@
+name: Docker Workflow
 on: [push]
 
 jobs:
@@ -11,4 +12,10 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Local k6 test
-        run: k6 run docker/script.js
+        run: k6 run --out json=output/results.json docker/script.js
+
+      - name: Store performance test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-report
+          path: output/results.json

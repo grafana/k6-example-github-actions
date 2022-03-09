@@ -10,6 +10,12 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Run local k6 test
-        uses: k6io/action@v0.1
+        uses: grafana/k6-action@v0.2.0
         with:
           filename: basic/script.js
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+          with:
+            name: code-coverage-report
+            path: output/test/code-coverage.html
