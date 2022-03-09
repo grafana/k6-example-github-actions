@@ -14,3 +14,10 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: basic/script.js
+          flags: --out json=output/results.json
+
+      - name: Store performance test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-report
+          path: output/results.json
