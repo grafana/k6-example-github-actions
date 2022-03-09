@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run k6 cloud test
-        uses: grafana/k6-action@v0.2.0
+        uses: k6io/action@v0.1
         with:
           filename: cloud/script.js
           cloud: true
