@@ -11,6 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Create output folder
+        run: mkdir output
+
       - name: Local k6 test
         run: k6 run --out json=output/results.json docker/script.js
 
