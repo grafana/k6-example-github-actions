@@ -7,12 +7,11 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Run k6 cloud test
-        uses: k6io/action@v0.1
+        uses: grafana/k6-action@v0.2.0
         with:
           cloud: true
           filename: cloud/script.js
-        env:
-          K6_CLOUD_TOKEN: ${{ secrets.k6_cloud_token }}
+          token: ${{ secrets.k6_cloud_token }}
