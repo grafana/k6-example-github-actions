@@ -1,0 +1,22 @@
+name: K6 Extension Workflow
+on: [push]
+
+jobs:
+  k6_local_test:
+    name: k6 local test run - basic example
+    runs-on: ubuntu-latest
+    container: docker://loadimpact/k6:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install xk6
+        run: go install go.k6.io/xk6/cmd/xk6@latest
+
+      - name: Build xk6-counter binary
+        run: xk6 build --with github.com/mstoykov/xk6-counter@latest
+
+      - name: Run k6 extension test
+        run: ./k6 run extension/script.js
+
