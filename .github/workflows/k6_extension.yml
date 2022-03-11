@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   k6_local_test:
-    name: k6 local test run - basic example
+    name: k6 counter extension run
     runs-on: ubuntu-latest
     container: docker://golang:1.17-alpine
 
