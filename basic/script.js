@@ -1,14 +1,17 @@
 import { check, sleep } from "k6";
 import http from "k6/http";
 
-export let options = {
-    stages: [
-        { duration: "20s", target: 10 }
-    ]
+export const options = {
+  duration: '1m',
+  vus: 50,
+  thresholds: {
+    http_req_failed: ['rate<0.01'], // http errors should be less than 1%
+    http_req_duration: ['p(95)<500'], // 95 percent of response times must be below 500ms
+  },
 };
 
 export default function() {
-    var r = http.get("http://test.loadimpact.com");
+    var r = http.get("https://test.k6.io");
     check(r, {
         "status is 200": (r) => r.status === 200
     });
