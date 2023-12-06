@@ -12,7 +12,7 @@ jobs:
 
       - name: download and extract k6 release binaries
         run: |
-          curl -L https://github.com/loadimpact/k6/releases/download/v0.25.1/k6-v0.25.1-win64.zip -o k6.zip
+          curl -L https://github.com/grafana/k6/releases/download/v0.25.1/k6-v0.25.1-win64.zip -o k6.zip
           7z.exe e k6.zip
         shell: bash
 
