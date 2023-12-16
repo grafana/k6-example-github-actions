@@ -15,6 +15,7 @@ Examples:
 | [.github/workflows/docker.yml](.github/workflows/docker.yml)              | Runs on ubuntu-latest, in a docker container created from the official k6 docker image |
 | [.github/workflows/k6_extension.yml](.github/workflows/k6_extension.yml)  | Runs on golang:1.17-alpine, an environment suitable for running k6 extensions          |
 | [.github/workflows/local-service.yml](.github/workflows/local-service.yml)  | Runs side by side with the system under test, Quickpizza          |
+| [.github/workflows/browser.yml](.github/workflows/browser.yml)  | Runs browser tests         |
 
 More complex examples could be combined from the basic examples from the list above.
 
