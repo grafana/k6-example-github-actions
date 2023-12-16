@@ -16,6 +16,7 @@ Examples:
 | [.github/workflows/k6_extension.yml](.github/workflows/k6_extension.yml)  | Runs on golang:1.17-alpine, an environment suitable for running k6 extensions          |
 | [.github/workflows/local-service.yml](.github/workflows/local-service.yml)  | Runs side by side with the system under test, Quickpizza          |
 | [.github/workflows/browser.yml](.github/workflows/browser.yml)  | Runs browser tests         |
+| [.github/workflows/run-with-glob.yml](.github/workflows/run-with-glob.yml)  | Runs multiple tests with glob pattern         |
 
 More complex examples could be combined from the basic examples from the list above.
 
